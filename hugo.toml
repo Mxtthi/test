@@ -1,6 +1,6 @@
 baseURL = 'https://mxtthi.github.io/test/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'de-de'
+title = 'Pieces'
 theme = 'Papermod'
 
 [menu]
