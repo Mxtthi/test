@@ -3,22 +3,22 @@
 <article class="post-single">
     <header class="post-header">
         {{ partial "breadcrumbs.html" . }}
-        <h1 class="post-title">
-            {{ .Title }}
-            {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-        </h1>
+        <!-- <h1 class="post-title">
+      {{ .Title }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1> -->
         {{- if .Description }}
         <div class="post-description">
             {{ .Description }}
         </div>
         {{- end }}
         {{- if not (.Param "hideMeta") }}
-        <div class="post-meta">
-            {{- partial "post_meta.html" . -}}
-            {{- partial "translation_list.html" . -}}
-            {{- partial "edit_post.html" . -}}
-            {{- partial "post_canonical.html" . -}}
-        </div>
+        <!-- <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div> -->
         {{- end }}
     </header>
     {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden
@@ -28,13 +28,86 @@
     {{- partial "toc.html" . }}
     {{- end }}
 
-    {{- if .Content }}
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./qrcode.js"></script>
+
+    <script type="text/javascript">
+        function GetNewChallenge() {
+            let level = document.getElementById("levelSelection").value;
+
+            $.getJSON("challenges.json", function (json) {
+
+                let filteredArray = [];
+                for (var i = 0; i < json.length; i++) {
+                    if (json[i]["Level"] == level) {
+                        filteredArray.push(json[i])
+                    }
+                }
+
+                let obj = filteredArray[getRandomInt(0, filteredArray.length)];
+
+                document.getElementById("title").innerHTML = obj["Name der Chellange"];
+                document.getElementById("description").innerHTML = obj["Beschreibung"];
+                document.getElementById("playerCount").innerHTML = "Personen: " + obj["Anzahl der Mitspieler"];
+                document.getElementById("duration").innerHTML = "Dauer: " + obj["Dauer (Minuten)"] + " Minuten";
+                document.getElementById("level").innerHTML = "Level: " + obj["Level"];
+
+                document.getElementById("qrcode").innerHTML = "";
+
+                new QRCode(document.getElementById("qrcode"), window.location.href + "/challenge.html#" + obj.id, {
+                    width: 300,
+                    height: 300
+                });
+            });
+        }
+    </script>
+
     <div class="post-content">
-        {{- if not (.Param "disableAnchoredHeadings") }}
-        {{- partial "anchored_headings.html" .Content -}}
-        {{- else }}{{ .Content }}{{ end }}
+        <h1>Challenge - Vergabe</h1>
+
+        <input type="button" value="Neue Challenge" onclick="GetNewChallenge()"
+            style="border: grey solid 1pt;border-radius: 3pt;padding: 1pt 4pt;background-color: lightgrey;">
+
+        <select name="level" id="levelSelection">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <h3 id="title">Titel</h3>
+        <p id="description">Beschreibung</p>
+        <p id="playerCount">Personen: </p>
+        <p id="duration">Dauer: </p>
+        <p id="level">Level: </p>
+        <div id="qrcode" style="width:300px; height:300px; margin-top:15px;"></div>
+
     </div>
-    {{- end }}
+
+    <script type="text/javascript">
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        }
+
+
+        $.getJSON("challenges.json", function (json) {
+            let obj = json[getRandomInt(0, json.length)];
+            console.log(obj);
+
+            document.getElementById("title").innerHTML = obj["Name der Chellange"];
+            document.getElementById("description").innerHTML = obj["Beschreibung"];
+            document.getElementById("playerCount").innerHTML = "Personen: " + obj["Anzahl der Mitspieler"];
+            document.getElementById("duration").innerHTML = "Dauer: " + obj["Dauer (Minuten)"] + " Minuten";
+            document.getElementById("level").innerHTML = "Level: " + obj["Level"];
+
+            new QRCode(document.getElementById("qrcode"), window.location.href + "/challenge.html#" + obj.id, {
+                width: 300,
+                height: 300
+            });
+        });
+    </script>
 
     <footer class="post-footer">
         {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
