@@ -2,6 +2,7 @@ baseURL = 'https://mxtthi.github.io/test/'
 languageCode = 'de-de'
 title = 'Pieces'
 theme = 'Papermod'
+uglyURLs = true
 
 [menu]
 [[menu.main]]
