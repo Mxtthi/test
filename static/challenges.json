@@ -1,0 +1,136 @@
+[
+{
+    "id": 1,
+    "Name der Chellange": "Schwebende Stange",
+    "Beschreibung": "Zwei Teams (z.B. 5 Spieler pro Seite) stehen sich gegen\u00fcber. Zwischen ihnen befindet sich ein l\u00e4nglicher Tisch. Jeder Spieler h\u00e4lt einen Zeigefinger in die Mitte. Auf den Zeigefingern liegt die Zeltstange. Ziel des Spieles ist es, die Stange auf den Tisch zu legen, ohne dass ein Mit-spieler Kontakt zu diesem Gegenstand verliert.",
+    "Anzahl der Mitspieler": 5,
+    "Dauer (Minuten)": 10,
+    "Level": 1,
+    "Schwerpunkt": 3,
+    "Kategorie": "",
+    "Material": [
+        "stifte"
+    ],
+    "Active": true
+},
+{
+    "id": 2,
+    "Name der Chellange": "Platz ist in der kleinsten H\u00fctte",
+    "Beschreibung": "Jeder K\u00f6rperteil, der den Boden ber\u00fchrt, muss auch auf dem A4 Blatt Platz finden.Variante: Beginnt mit einem A0 Blatt und faltet dieses immer kleiner bis A4.",
+    "Anzahl der Mitspieler": 3,
+    "Dauer (Minuten)": 5,
+    "Level": 1,
+    "Schwerpunkt": 1,
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 3,
+    "Name der Chellange": "Komm, spiel mit mir",
+    "Beschreibung": "Sucht euch einen CAEX Leiter einer anderen Gruppe und bringt euch gegenseitig ein Spiel bei!",
+    "Anzahl der Mitspieler": 2,
+    "Dauer (Minuten)": 10,
+    "Level": 2,
+    "Schwerpunkt": 4,
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 4,
+    "Name der Chellange": "Colormatch",
+    "Beschreibung": "Finde  jemanden  dessen  Gruppen-Halstuch  aus  den  selben  Farben  wie  deines  besteht  (aus  einer anderen Gruppe)",
+    "Anzahl der Mitspieler": 2,
+    "Dauer (Minuten)": 60,
+    "Level": 3,
+    "Schwerpunkt": 4,
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 5,
+    "Name der Chellange": "Cultureclash",
+    "Beschreibung": "Lerne etwas aus einer anderen Kultur z.B.: ein Lied, ein Spiel, ein Ritual,...",
+    "Anzahl der Mitspieler": 2,
+    "Dauer (Minuten)": 10,
+    "Level": 2,
+    "Schwerpunkt": 1,
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 6,
+    "Name der Chellange": "Durchschnittsalter",
+    "Beschreibung": "Finde das Durchschnittsalter am Lager heraus!",
+    "Anzahl der Mitspieler": 1,
+    "Dauer (Minuten)": 15,
+    "Level": 1,
+    "Schwerpunkt": 1,
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 7,
+    "Name der Chellange": "Bank-Challenge",
+    "Beschreibung": "Einer aus eurer Patrulle liegt auf einer Heurigenbank/Bierbank. Er muss nun ohne den Bo-den zu ber\u00fchren unter der Bank durchklettern bis er wieder drauf liegt. Die Bank darf nichtgehalten werden",
+    "Anzahl der Mitspieler": 2,
+    "Dauer (Minuten)": 15,
+    "Level": 2,
+    "Schwerpunkt": "",
+    "Kategorie": "",
+    "Material": [],
+    "Active": true
+},
+{
+    "id": 8,
+    "Name der Chellange": "Massagekreis",
+    "Beschreibung": "Tut euch gegenseitig etwas Gutes. Setzt euch im Kreis und massiert den R\u00fccken der Person vor euch.",
+    "Anzahl der Mitspieler": 5,
+    "Dauer (Minuten)": 15,
+    "Level": 3,
+    "Schwerpunkt": "",
+    "Kategorie": "",
+    "Material": [],
+    "Active": false
+},
+{
+    "id": 9,
+    "Name der Chellange": "Seilziehen",
+    "Beschreibung": "Fordert eine andere Kleingruppe zum Seilziehen heraus. Die Gewinnergruppe erh\u00e4lt einen W\u00fcrfelteil. Vorsicht: Wickelt das Seil nicht um eure H\u00e4nde.",
+    "Anzahl der Mitspieler": 10,
+    "Dauer (Minuten)": 15,
+    "Level": 5,
+    "Schwerpunkt": "",
+    "Kategorie": "",
+    "Material": [],
+    "Active": false
+},
+{
+    "id": 10,
+    "Name der Chellange": "Lied gurgeln",
+    "Beschreibung": "Gurgelt gemeinsam ein Lied",
+    "Anzahl der Mitspieler": 2,
+    "Dauer (Minuten)": 15,
+    "Level": 3,
+    "Schwerpunkt": "",
+    "Kategorie": "",
+    "Material": [],
+    "Active": false
+},
+{
+    "id": 11,
+    "Name der Chellange": "",
+    "Beschreibung": "",
+    "Anzahl der Mitspieler": "",
+    "Dauer (Minuten)": "",
+    "Level": "",
+    "Schwerpunkt": "",
+    "Kategorie": "",
+    "Material": [],
+    "Active": false
+}
+]

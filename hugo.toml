@@ -2,3 +2,20 @@ baseURL = 'https://mxtthi.github.io/test/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'Papermod'
+
+[menu]
+[[menu.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+[[menu.main]]
+  name = 'Challenges'
+  pageRef = '/challenge'
+  weight = 20
+[[menu.main]]
+  name = 'Q & A'
+  pageRef = '/QA'
+  weight = 30
+
+  [markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
